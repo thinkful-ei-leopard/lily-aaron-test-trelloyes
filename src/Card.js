@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Card (props) {
+export default function Card (props) {
     return (
         <div className="Card">
             <button type ="button">delete</button>
@@ -10,4 +10,4 @@ function Card (props) {
     )
 }
 
-export default Card
+

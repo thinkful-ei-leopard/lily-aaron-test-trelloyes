@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card.js';
 import './List.css';
-
+//handleAdd belongs here
 export default function List(props) {
     return (
        <section className="List">
@@ -14,11 +14,14 @@ export default function List(props) {
                     title={card.title}
                     content={card.content}
                     key={card.id}
+                    id={card.id}
+                    handleDelete={props.handleDelete}
                     />
                )}
                <button
                     type='button'
-                    className='List-add-button'>
+                    className='List-add-button'
+                    onClick={() => {props.handleAdd(props.id)}}>
                         + Add Random Card
                 </button>
            </div>
